@@ -22,35 +22,35 @@ class Employee
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class=UuidGenerator::class)
      */
-    private $id;
+    private UuidInterface $id;
 
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private string $name;
 
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
-    private $surname;
+    private string $surname;
 
     /**
      * @var int
      *
      * @ORM\Column(type="integer")
      */
-    private $salary;
+    private int $salary;
 
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=3)
      */
-    private $salaryCurrency;
+    private string $salaryCurrency;
 
     public function getId(): UuidInterface
     {

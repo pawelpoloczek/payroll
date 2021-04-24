@@ -22,35 +22,35 @@ class Department
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class=UuidGenerator::class)
      */
-    private $id;
+    private UuidInterface $id;
 
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private string $name;
 
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
-    private $bonusType;
+    private string $bonusType;
 
     /**
      * @var int
      *
      * @ORM\Column(type="integer")
      */
-    private $bonusValue;
+    private int $bonusValue;
 
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=3)
      */
-    private $bonusCurrency;
+    private string $bonusCurrency;
 
     public function getId(): UuidInterface
     {
